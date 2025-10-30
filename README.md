@@ -35,6 +35,18 @@ Ollama 0.1.26+
 TextGrad 0.1.4
 
 # See requirements.txt for full list
+# Basic installation
+pip install -r requirements.txt
+
+# With GPU support (recommended)
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# Verify installation
+python -c "import torch; print(f'PyTorch: {torch.__version__}, CUDA: {torch.cuda.is_available()}')"
+python -c "import textgrad; print(f'TextGrad: {textgrad.__version__}')"
+
+# Download required NLTK data
+python -c "import nltk; nltk.download('brown'); nltk.download('punkt')"
 ```
 
 ## Installation
